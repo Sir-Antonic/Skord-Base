@@ -38,9 +38,5 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
-/src/minecraft - asset source/
-/src/minecraft - asset source/minecraft/
-/src/minecraft - asset source/minecraft/blockstates/
-/src/minecraft - asset source/minecraft/models/
-/src/minecraft - asset source/minecraft/particles/
-/src/minecraft - asset source/minecraft/textures/
+/src/minecraft - asset source/*
+
