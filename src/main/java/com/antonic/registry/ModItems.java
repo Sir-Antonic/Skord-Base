@@ -9,6 +9,8 @@ import static com.antonic.Reference.log;
 
 public class ModItems {
 
+    public static final Item CROP_STICKS = registerItem("crop_stick", new Item(new Item.Settings()));
+
     public ModItems()
     {
         throw new AssertionError();
