@@ -3,15 +3,15 @@
 	"id": "skord",
 	"version": "${version}",
 	"name": "Skord",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod is an attempt to bring IC2 style farming to modern minecraft.",
 	"authors": [
-		"Me!"
+		"Antonic"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/skord/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -20,6 +20,15 @@
 		],
 		"fabric-datagen": [
 			"com.antonic.SkordDataGenerator"
+		],
+		"client": [
+			"com.antonic.SkordClient"
+		],
+		"jade": [
+			"com.antonic.compat.jade.ModJadePlugin"
+		],
+		"rei_client": [
+			"com.antonic.compat.rei.ModREIClientPlugin"
 		]
 	},
 	"mixins": [

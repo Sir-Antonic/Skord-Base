@@ -1,6 +1,6 @@
 package com.antonic.registry;
 
-public enum ModArmorMaterials{
+public class ModArmorMaterials{
 
 
 
