@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "com.antonic.mixin",
+	"package": "com.antonic.skord.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"
