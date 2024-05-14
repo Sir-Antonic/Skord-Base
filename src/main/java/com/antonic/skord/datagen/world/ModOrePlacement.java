@@ -1,4 +1,4 @@
-package com.antonic.datagen.world;
+package com.antonic.skord.datagen.world;
 
 import net.minecraft.world.gen.placementmodifier.*;
 

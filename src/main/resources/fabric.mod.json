@@ -16,19 +16,19 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.antonic.Skord"
+			"com.antonic.skord.Skord"
 		],
 		"fabric-datagen": [
-			"com.antonic.SkordDataGenerator"
+			"com.antonic.skord.SkordDataGenerator"
 		],
 		"client": [
-			"com.antonic.SkordClient"
+			"com.antonic.skord.SkordClient"
 		],
 		"jade": [
-			"com.antonic.compat.jade.ModJadePlugin"
+			"com.antonic.skord.compat.jade.ModJadePlugin"
 		],
 		"rei_client": [
-			"com.antonic.compat.rei.ModREIClientPlugin"
+			"com.antonic.skord.compat.rei.ModREIClientPlugin"
 		]
 	},
 	"mixins": [

@@ -1,4 +1,4 @@
-package com.antonic.datagen.world;
+package com.antonic.skord.datagen.world;
 
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -6,7 +6,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
-import static com.antonic.Reference.logRGB256;
+import static com.antonic.skord.Reference.logRGB256;
 
 public class ModConfiguredFeatures {
 

@@ -1,4 +1,4 @@
-package com.antonic.datagen.world;
+package com.antonic.skord.datagen.world;
 
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -10,8 +10,8 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;
 
-import static com.antonic.Reference.identifier;
-import static com.antonic.Reference.logRGB256;
+import static com.antonic.skord.Reference.identifier;
+import static com.antonic.skord.Reference.logRGB256;
 
 public class ModPlacedFeatures {
 
