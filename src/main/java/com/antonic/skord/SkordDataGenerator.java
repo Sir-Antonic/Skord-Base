@@ -1,15 +1,13 @@
 package com.antonic.skord;
 
 import com.antonic.skord.datagen.*;
-import com.antonic.skord.datagen.world.ModConfiguredFeatures;
-import com.antonic.skord.datagen.world.ModPlacedFeatures;
+import com.antonic.skord.datagen.world.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
-import static com.antonic.skord.Reference.logBackRGB256;
-import static com.antonic.skord.Reference.logRGB256;
+import static com.antonic.skord.Reference.*;
 
 public class SkordDataGenerator implements DataGeneratorEntrypoint {
 	@Override

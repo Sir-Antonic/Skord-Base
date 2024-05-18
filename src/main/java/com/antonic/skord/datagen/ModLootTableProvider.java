@@ -1,8 +1,10 @@
 package com.antonic.skord.datagen;
 
+import com.antonic.skord.registry.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -28,6 +30,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
 
         logRGB256("Generating Loot Table Data", 0, 255, 0);
+
+        addDrop(ModBlocks.GARDEN_SOIL);
 
     }
 

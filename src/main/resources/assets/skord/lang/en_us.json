@@ -1,3 +1,15 @@
 {
-  "item.skord.crop_sticks": "Crop Sticks"
+  "skord.skord.group": "Skord",
+
+  "item.skord.crop_sticks": "Crop Sticks",
+  "item.skord.fertilizer": "Fertilizer",
+  "item.skord.weed_be_gone": "Weed-Be-Gone",
+  "item.skord.hydration_cell": "Hydration Cell",
+  "item.skord.plant_lens": "Plant Lens",
+  "item.skord.weeding_trowel": "Weeding Trowel",
+  "item.skord.spade": "Spade",
+  "item.skord.crop_analyzer": "Crop Analyzer",
+  "item.skord.portable_scanner": "Portable Scanner",
+
+  "block.skord.garden_soil": "Garden Soil"
 }

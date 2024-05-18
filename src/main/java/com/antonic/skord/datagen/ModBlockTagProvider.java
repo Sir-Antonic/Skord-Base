@@ -1,5 +1,6 @@
 package com.antonic.skord.datagen;
 
+import com.antonic.skord.registry.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -22,7 +23,13 @@ public class ModBlockTagProvider  extends FabricTagProvider.BlockTagProvider {
 
         logRGB256("Generating Block Tag Data", 0, 255, 0);
 
+        getOrCreateTagBuilder(BlockTags.CROPS);
+
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE);
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE);
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);

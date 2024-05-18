@@ -52,25 +52,25 @@ public class Reference {
     public static void log(String message)
     {
         if (DEBUG)
-            LOGGER.info(ANSI_BRIGHT_MAGENTA + ">>> " + message + ANSI_RESET);
+            LOGGER.info(ANSI_BRIGHT_MAGENTA + ">>> {}" + ANSI_RESET, message);
     }
 
     public static void logN(String message)
     {
         if (DEBUG)
-            LOGGER.info(">>> " + message);
+            LOGGER.info(">>> {}", message);
     }
 
     public static void logRGB256(String message, int r, int g, int b)
     {
         if (DEBUG)
-            LOGGER.info("\u001b[38;2;" + r + ";" + g + ";" + b + "m>>> " + message + ANSI_RESET);
+            LOGGER.info("\u001B[38;2;{};{};{}m>>> {}" + ANSI_RESET, r, g, b, message);
     }
 
     public static void logBackRGB256(String message, int rf, int gf, int bf, int rb, int gb, int bb)
     {
         if (DEBUG)
-            LOGGER.info("\u001b[38;2;" + rf + ";" + gf + ";" + bf + ";48;2;" + rb + ";" + gb + ";" + bb + "m>>> " + message + " " + ANSI_RESET);
+            LOGGER.info("\u001B[38;2;{};{};{};48;2;{};{};{}m>>> {} " + ANSI_RESET, rf, gf, bf, rb, gb, bb, message);
     }
 
     @NotNull

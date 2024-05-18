@@ -18,12 +18,15 @@ repositories {
 	// for more information about repositories.
 
 	maven { url "https://maven.shedaniel.me" }
+
 	maven {
 		url "https://cursemaven.com"
 		content {
 			includeGroup "curse.maven"
 		}
 	}
+
+	maven { url "https://maven.terraformersmc.com/releases/" }
 
 	maven {
 		name = "CottonMC"
@@ -54,13 +57,20 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Roughly Enough Items
-	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
-	modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
+	//Cloth API
+	modApi "me.shedaniel.cloth:cloth-config-fabric:14.0.126"
 
-	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
+	//Architectury
+	modImplementation "curse.maven:architectury-api-419699:5353083"
+
+	//Roughly Enough Items
+	//modApi "me.shedaniel:RoughlyEnoughItems-fabric:15.0.728"
+	//modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:15.0.728"
+	//modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:15.0.728"
+
+	//modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
+		//exclude(group: "net.fabricmc.fabric-api")
+	//}
 
 	//LibGUI
 	modImplementation include("io.github.cottonmc:LibGui:${project.libgui_version}")
