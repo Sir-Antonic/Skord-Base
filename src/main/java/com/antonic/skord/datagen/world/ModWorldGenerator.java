@@ -1,4 +1,4 @@
-package com.antonic.skord.datagen;
+package com.antonic.skord.datagen.world;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
@@ -15,15 +15,15 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider {
     }
 
     @Override
+    public String getName() {
+        return ModID;
+    }
+
+    @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
 
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
 
-    }
-
-    @Override
-    public String getName() {
-        return ModID;
     }
 }

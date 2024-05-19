@@ -26,6 +26,9 @@
 		],
 		"jade": [
 			"com.antonic.skord.compat.jade.ModJadePlugin"
+		],
+		"rei_client": [
+			"com.antonic.skord.compat.rei.ModREIClientPlugin"
 		]
 	},
 	"mixins": [

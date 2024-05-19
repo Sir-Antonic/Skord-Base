@@ -31,6 +31,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.CROP_STICKS, Models.GENERATED);
         itemModelGenerator.register(ModItems.FERTILIZER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WEED_BE_GONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HYDRATION_CELL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PLANT_LENS, Models.GENERATED);
 
     }
 }

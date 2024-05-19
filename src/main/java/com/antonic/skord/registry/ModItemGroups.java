@@ -10,27 +10,37 @@ import static com.antonic.skord.Reference.*;
 
 public class ModItemGroups {
 
-    public static final ItemGroup SKORD = Registry.register(Registries.ITEM_GROUP,
-            identifier(ModID + "_skord_group"),
-                FabricItemGroup.builder().displayName(translate("skord.group"))
-                    .icon(()-> new ItemStack(ModItems.CROP_STICKS))
+    public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP,
+            identifier(ModID + "_block_group"),
+                FabricItemGroup.builder().displayName(translate("block.group"))
+                    .icon(()-> new ItemStack(ModBlocks.GARDEN_SOIL))
                     .entries((displayContext, entries) -> {
 
-                        //Items
-                        entries.add(ModItems.CROP_STICKS);
-                        entries.add(ModItems.FERTILIZER);
-                        entries.add(ModItems.WEED_BE_GONE);
-                        entries.add(ModItems.HYDRATION_CELL);
-                        entries.add(ModItems.PLANT_LENS);
-                        entries.add(ModItems.WEEDING_TROWEL);
-                        entries.add(ModItems.SPADE);
-                        entries.add(ModItems.CROP_ANALYZER);
-                        entries.add(ModItems.PORTABLE_SCANNER);
-
-                        //Blocks
                         entries.add(ModBlocks.GARDEN_SOIL);
 
+                    }).build());
 
+    public static final ItemGroup INGREDIENTS = Registry.register(Registries.ITEM_GROUP,
+            identifier(ModID + "_ingredients_group"),
+            FabricItemGroup.builder().displayName(translate("ingredients.group"))
+                    .icon(()-> new ItemStack(ModItems.FERTILIZER))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.CROP_STICKS);
+                        entries.add(ModItems.FERTILIZER);
+                        entries.add(ModItems.HYDRATION_CELL);
+                        entries.add(ModItems.WEED_BE_GONE);
+                    }).build());
+
+    public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP,
+            identifier(ModID + "_tools_group"),
+            FabricItemGroup.builder().displayName(translate("tools.group"))
+                    .icon(()-> new ItemStack(ModItems.CROP_ANALYZER))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.CROP_ANALYZER);
+                        entries.add(ModItems.PLANT_LENS);
+                        entries.add(ModItems.PORTABLE_SCANNER);
+                        entries.add(ModItems.WEEDING_TROWEL);
+                        entries.add(ModItems.SPADE);
                     }).build());
 
     public ModItemGroups()

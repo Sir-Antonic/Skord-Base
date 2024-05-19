@@ -1,5 +1,7 @@
 {
-  "skord.skord.group": "Skord",
+  "skord.block.group": "Blocks",
+  "skord.ingredient.group": "Ingredients",
+  "skord.tool.group": "Tools",
 
   "item.skord.crop_sticks": "Crop Sticks",
   "item.skord.fertilizer": "Fertilizer",

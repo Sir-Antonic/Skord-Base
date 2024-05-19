@@ -38,31 +38,3 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
-
-# minecraft assets
-minecraft - asset source/
-E:\Skord\src\minecraft - asset source
-minecraft - asset source
-/minecraft - asset source/minecraft/
-/minecraft - asset source/minecraft/blockstates/
-/minecraft - asset source/minecraft/models/
-/minecraft - asset source/minecraft/particles/
-/minecraft - asset source/minecraft/textures/
-/minecraft - asset source/minecraft/models/block/
-/minecraft - asset source/minecraft/models/item/
-/minecraft - asset source/minecraft/textures/block/
-/minecraft - asset source/minecraft/textures/colormap/
-/minecraft - asset source/minecraft/textures/effect/
-/minecraft - asset source/minecraft/textures/entity/
-/minecraft - asset source/minecraft/textures/environment/
-/minecraft - asset source/minecraft/textures/font/
-/minecraft - asset source/minecraft/textures/gui/
-/minecraft - asset source/minecraft/textures/item/
-/minecraft - asset source/minecraft/textures/map/
-/minecraft - asset source/minecraft/textures/misc/
-/minecraft - asset source/minecraft/textures/mob_effect/
-/minecraft - asset source/minecraft/textures/models/
-/minecraft - asset source/minecraft/textures/painting/
-/minecraft - asset source/minecraft/textures/particle/
-/minecraft - asset source/minecraft/textures/trims/
-/minecraft base assets/

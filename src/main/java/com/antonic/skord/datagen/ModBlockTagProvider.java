@@ -1,6 +1,5 @@
 package com.antonic.skord.datagen;
 
-import com.antonic.skord.registry.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;

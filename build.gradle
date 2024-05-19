@@ -11,14 +11,7 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
-
 	maven { url "https://maven.shedaniel.me" }
-
 	maven {
 		url "https://cursemaven.com"
 		content {
@@ -26,23 +19,27 @@ repositories {
 		}
 	}
 
-	maven { url "https://maven.terraformersmc.com/releases/" }
-
 	maven {
 		name = "CottonMC"
 		url = "https://server.bbkr.space/artifactory/libs-release"
 	}
 	maven {
-		name = "Ladysnake Mods"
-		url = "https://maven.ladysnake.org/releases"
+		name = 'Ladysnake Mods'
+		url = 'https://maven.ladysnake.org/releases'
 		content {
-			includeGroup "io.github.ladysnake"
-			includeGroupByRegex "io\\.github\\.onyxstudios.*"
+			includeGroup 'io.github.ladysnake'
+			includeGroupByRegex 'io\\.github\\.onyxstudios.*'
 		}
 	}
-	maven { url = "https://maven.minecraftforge.net/"}
-	maven { url = "https://jitpack.io"}
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/'
+	}
+	maven { url = 'https://maven.minecraftforge.net/' }
+	maven { url = "https://maven.kyrptonaught.dev" }
+	maven { url 'https://jitpack.io' }
 }
+
 
 fabricApi {
 	configureDataGeneration()
@@ -57,29 +54,46 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Cloth API
-	modApi "me.shedaniel.cloth:cloth-config-fabric:14.0.126"
+	/*// REI Compatibility Dependency
+	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
-	//Architectury
-	modImplementation "curse.maven:architectury-api-419699:5353083"
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 
-	//Roughly Enough Items
-	//modApi "me.shedaniel:RoughlyEnoughItems-fabric:15.0.728"
-	//modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:15.0.728"
-	//modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:15.0.728"
+	modApi "dev.architectury:architectury-fabric:${project.architectury_version}"*/
 
-	//modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
-		//exclude(group: "net.fabricmc.fabric-api")
-	//}
+	// Energy API Handling Dependency
+	include modApi("teamreborn:energy:${project.energy_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	// Tech Reborn Mod for Testing
+	//modImplementation("curse.maven:reborncore-237903:${project.reborn_curse_version}")
+	//modImplementation("curse.maven:techreborn-233564:${project.tech_reborn_version}")
 
-	//LibGUI
+	// Needed for LibGUI
 	modImplementation include("io.github.cottonmc:LibGui:${project.libgui_version}")
 
-	//Player Ability Lib
+	// Needed for Sign and Boat
+	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
+	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
+
+	// Needed for Custom Biomes
+	modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
+
+	// Needed for custom portals
+	modImplementation "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
+	include "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
+
+	// Needed for Fluid Handling
+	modImplementation include("com.github.drkhodakarami:fluidutils:${project.fluidutils_version}")
+
+	// Needed for Custom Player Effects
 	modImplementation "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
 	include "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
 
-	//Jade
+	// to get the latest jade
 	modImplementation "curse.maven:jade-324717:${project.jade_version}"
 	
 }
@@ -115,17 +129,23 @@ jar {
 // configure the maven publication
 publishing {
 	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
+		mavenJava(MavenPublication) {
 			from components.java
 		}
 	}
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+	}
+}
+
+tasks.create("checkVersionFileValidation") {
+	doFirst {
+		File testFile = new File("${remapJar.archiveFile.get()}")
+		if (testFile.isFile()) {
+			throw new GradleException("project version is built before, change the project version >>> ${project.mod_version}")
+		} else {
+			println "Project version needs building >>> ${project.archives_base_name}-${project.mod_version}"
+		}
 	}
 }
