@@ -34,7 +34,7 @@ public class ModItemGroups {
     public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP,
             identifier(ModID + "_tools_group"),
             FabricItemGroup.builder().displayName(translate("tools.group"))
-                    .icon(()-> new ItemStack(ModItems.CROP_ANALYZER))
+                    .icon(()-> new ItemStack(ModItems.PLANT_LENS))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CROP_ANALYZER);
                         entries.add(ModItems.PLANT_LENS);
