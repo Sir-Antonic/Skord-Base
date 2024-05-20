@@ -40,7 +40,12 @@ public class ModItemGroups {
                         entries.add(ModItems.PLANT_LENS);
                         entries.add(ModItems.PORTABLE_SCANNER);
                         entries.add(ModItems.WEEDING_TROWEL);
-                        entries.add(ModItems.SPADE);
+                        entries.add(ModItems.WOODEN_SPADE);
+                        entries.add(ModItems.STONE_SPADE);
+                        entries.add(ModItems.IRON_SPADE);
+                        entries.add(ModItems.GOLDEN_SPADE);
+                        entries.add(ModItems.DIAMOND_SPADE);
+                        entries.add(ModItems.NETHERITE_SPADE);
                     }).build());
 
     public ModItemGroups()

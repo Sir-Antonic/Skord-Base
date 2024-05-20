@@ -33,7 +33,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FERTILIZER, Models.GENERATED);
         itemModelGenerator.register(ModItems.WEED_BE_GONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYDRATION_CELL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PLANT_LENS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PLANT_LENS, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.WOODEN_SPADE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STONE_SPADE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.IRON_SPADE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.GOLDEN_SPADE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIAMOND_SPADE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NETHERITE_SPADE, Models.HANDHELD);
 
     }
 }

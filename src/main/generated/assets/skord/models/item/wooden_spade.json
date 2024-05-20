@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "skord:item/plant_lens"
+    "layer0": "skord:item/wooden_spade"
   }
 }
